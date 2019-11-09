@@ -1,7 +1,9 @@
 import React from 'react';
-import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import PlayerCard from "./components/playerCard";
+import 'semantic-ui-css/semantic.min.css';
+import axios from "axios";
+import NavBar from "./components/Navbar";
 
 
 class App extends React.Component {
@@ -13,10 +15,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/players")
-      .then(res => res.json())
-      .then(res => console.log(res))
-      .then(res => this.setState({ userData: res }))
+    axios.get("http://localhost:5000/api/players")
+      // .then(res => res.json())
+      // .then(res => console.log(res))
+      .then(res => this.setState({ playerData: res.data }))
       .catch(err => console.log(err));
     }
 
@@ -24,13 +26,13 @@ class App extends React.Component {
       console.log(this.state);
       return (
         <div className="App">
-          <h1>Soccer Players</h1>
+          <NavBar />
           <PlayerCard playerData={this.state.playerData} />
         </div>
       );
     }
     
-  }
+  }//App
 
 
 export default App;

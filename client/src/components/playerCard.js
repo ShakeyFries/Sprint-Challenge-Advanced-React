@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Card, Container } from 'semantic-ui-react';
 
 const PlayerCard = (props) => {
+  console.log("playerCard", props.playerData);
   return(
     <div>
       <Container>
@@ -10,13 +11,14 @@ const PlayerCard = (props) => {
             <Card.Header>Players</Card.Header>
           </Card.Content>
           <Card.Content>
-            <Grid columns={5}>
+            <Grid columns={4}>
               <Grid.Row>
-                {props.playerData.map(person =>
-                <Grid.Column key={person.id}>
-                  <Card color="hot-pink">
-                <Card.Header wrapped ui={false} >{props.playerData.name} </Card.Header>
-                    <Card.Header>{props.playerData.country}</Card.Header>
+                {props.playerData.map(soccer =>
+                <Grid.Column key={soccer.id}>
+                  <Card color="pink">
+                    <Card.Header> {soccer.name} </Card.Header>
+                    <Card.Header>{soccer.country}</Card.Header>
+                    <Card.Header>{soccer.searches}</Card.Header>
                   </Card>
                 </Grid.Column>
                 )}

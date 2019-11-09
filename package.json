@@ -4,15 +4,20 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.3",
+    "@testing-library/react": "^9.3.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "testing-library": "^0.0.2"
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "nodemon": "^1.17.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest"
   },
   "author": "Lambda School",
   "license": "ISC"

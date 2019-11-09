@@ -1,11 +1,17 @@
 import React from 'react';
 import { Grid, Card, Container } from 'semantic-ui-react';
+import useDarkMode from "../Hooks/useDarkMode";
 
 const PlayerCard = (props) => {
   console.log("playerCard", props.playerData);
+  const [darkMode, setDarkMode] = useDarkMode(false);
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
   return(
     <div>
-      <Container>
+      <Container >
         <Card fluid>
           <Card.Content>
             <Card.Header>Players</Card.Header>

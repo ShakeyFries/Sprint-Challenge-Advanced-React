@@ -22,11 +22,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [ ] Why would you use class component over function components (removing hooks from the question)? 
+- because a functional component is just a plain JS function you cannot set state. 
 
+- [ ] Name three lifecycle methods and their purposes.
+- componentDidMount: This is the phase when the component is being built out from ground up. , componenetDidUpdate: commit phase, and          Render: when this method gets called it should return some piece of DOM.
+
+- [ ] What is the purpose of a custom hook? - allow you to apply non-visual behavior and stateful logic throughout your components by    reusing the same hook over and over again. They follow the same patterns of naming that you’ve already learned (i.e. prefacing the function name with use, as in useState). You can build a reusable custom hook for uses as varied as handling controlled inputs, managing event listeners, and watching for key presses.
+
+- [ ] Why is it important to test our apps?
+Automated testing minimizes the risk of bugs finding their way into production code. Testing is NOT optional, it should be a part of every developer’s workflow. The feature is not done until it’s fully tested!
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
